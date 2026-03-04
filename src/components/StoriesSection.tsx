@@ -1,26 +1,53 @@
+import { CalendarDays, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+
 const StoriesSection = () => {
   return (
     <section className="bg-dark-surface py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-16 text-center">
-        <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">
-          COMPARTILHANDO HISTÓRIAS IMPACTANTES
+        <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-8">
+          Conheça o Oficina High Ticket
         </h2>
-        <p className="text-muted-foreground text-base mb-12">
-          Histórias inspiradoras de transformação daqueles que estiveram junto a nós nesta jornada de crescimento.
-        </p>
 
-        <div className="mb-12">
-          <h3 className="text-xl md:text-2xl font-heading font-bold text-foreground mb-8">
-            Conheça parte do conteúdo da Oficina High Ticket:
-          </h3>
+        <div className="max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden mb-10">
+          <iframe
+            src="https://www.youtube.com/embed/0etCUDe9BHE"
+            title="Oficina High Ticket"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+          />
         </div>
 
-        <a
-          href="#"
-          className="inline-block bg-primary text-primary-foreground font-heading font-bold uppercase tracking-wider px-8 py-3 rounded-lg hover:bg-gold-light transition-colors"
-        >
-          Quero participar!
-        </a>
+        <div className="mb-10">
+          <Button
+            asChild
+            size="lg"
+            className="bg-primary text-primary-foreground font-heading font-bold uppercase tracking-wider hover:bg-gold-light"
+          >
+            <a href="#">Quero participar!</a>
+          </Button>
+        </div>
+
+        <div className="bg-card border border-border rounded-2xl p-8 lg:p-14 text-left max-w-3xl mx-auto">
+          <h3 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-6">
+            OFICINA HIGH TICKET
+          </h3>
+          <p className="text-muted-foreground text-base leading-relaxed mb-8">
+            O evento criado para ajudar experts e empresários a construírem um Funil High Ticket Perpétuo em apenas 30 dias.
+          </p>
+
+          <div className="space-y-3">
+            <div className="flex items-center gap-3 text-muted-foreground text-sm">
+              <CalendarDays size={18} className="text-gold" />
+              <span>18/06/2025 das 14 às 18h</span>
+            </div>
+            <div className="flex items-center gap-3 text-muted-foreground text-sm">
+              <MapPin size={18} className="text-gold" />
+              <span>SoftTown</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
