@@ -6,18 +6,17 @@ const TestimonialsSection = () => {
           O que falam sobre o nosso ecosistema?
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="aspect-video rounded-lg overflow-hidden">
-              <iframe
-                src="https://www.youtube.com/embed/XHOmBV4js_E"
-                title={`Depoimento ${i}`}
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-                className="w-full h-full"
-              />
-            </div>
-          ))}
+        <div className="max-w-3xl mx-auto aspect-video rounded-lg overflow-hidden">
+          <iframe
+            id="panda-1fbb7f17-8271-43a5-95d1-131a725191ae"
+            src="https://player-vz-a960b54f-3b1.tv.pandavideo.com.br/embed/?v=1fbb7f17-8271-43a5-95d1-131a725191ae"
+            style={{ border: "none" }}
+            allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
+            // @ts-ignore
+            fetchPriority="high"
+          />
         </div>
       </div>
     </section>
