@@ -1,5 +1,7 @@
 import { Instagram, Youtube, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { motion } from "framer-motion";
+import ScrollReveal from "./ScrollReveal";
 import contactImg from "@/assets/contact-collage.png";
 
 const WHATSAPP_URL =
@@ -10,8 +12,7 @@ const ContactSection = () => {
     <section className="bg-dark-surface py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-          {/* Copy + CTA */}
-          <div className="flex flex-col items-start gap-6">
+          <ScrollReveal direction="left" className="flex flex-col items-start gap-6">
             <p className="text-gold-light text-sm font-heading font-medium tracking-widest-custom uppercase">
               Fale diretamente comigo
             </p>
@@ -22,41 +23,42 @@ const ContactSection = () => {
               Clique no botão abaixo e fale comigo diretamente pelo WhatsApp. Estou pronto para entender a sua necessidade e mostrar o melhor caminho.
             </p>
             <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
-              <Button className="bg-[#25D366] hover:bg-[#1da851] text-white font-heading font-bold uppercase tracking-wider text-base px-8 py-6 gap-2">
-                <MessageCircle size={20} />
-                Falar com Leandro Herbert
-              </Button>
+              <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.97 }}>
+                <Button className="bg-[#25D366] hover:bg-[#1da851] text-white font-heading font-bold uppercase tracking-wider text-base px-8 py-6 gap-2">
+                  <MessageCircle size={20} />
+                  Falar com Leandro Herbert
+                </Button>
+              </motion.div>
             </a>
 
-            {/* Social footer */}
             <div className="flex gap-6 mt-4">
-              <a
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-gold-light transition-colors"
-              >
-                <Instagram size={24} />
-              </a>
-              <a
-                href="https://www.youtube.com"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-foreground hover:text-gold-light transition-colors"
-              >
-                <Youtube size={24} />
-              </a>
+              {[
+                { href: "https://www.instagram.com", Icon: Instagram },
+                { href: "https://www.youtube.com", Icon: Youtube },
+              ].map(({ href, Icon }) => (
+                <motion.a
+                  key={href}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-gold-light transition-colors"
+                  whileHover={{ scale: 1.2 }}
+                >
+                  <Icon size={24} />
+                </motion.a>
+              ))}
             </div>
-          </div>
+          </ScrollReveal>
 
-          {/* Image */}
-          <div className="rounded-lg overflow-hidden">
-            <img
-              src={contactImg}
-              alt="Momentos com Leandro Herbert"
-              className="w-full h-full object-cover rounded-lg"
-            />
-          </div>
+          <ScrollReveal direction="right">
+            <div className="rounded-lg overflow-hidden">
+              <img
+                src={contactImg}
+                alt="Momentos com Leandro Herbert"
+                className="w-full h-full object-cover rounded-lg"
+              />
+            </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
