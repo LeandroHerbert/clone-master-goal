@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const StoriesSection = () => {
   return (
-    <section className="bg-dark-surface py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-right">
       <div className="container mx-auto px-6 lg:px-16 text-center">
         <ScrollReveal>
           <h2 className="text-2xl md:text-3xl font-heading font-bold text-foreground mb-8">

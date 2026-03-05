@@ -9,7 +9,7 @@ const WHATSAPP_URL =
 
 const ContactSection = () => {
   return (
-    <section className="bg-dark-surface py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-right">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <ScrollReveal direction="left" className="flex flex-col items-start gap-6">

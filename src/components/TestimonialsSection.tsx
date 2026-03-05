@@ -2,7 +2,7 @@ import ScrollReveal from "./ScrollReveal";
 
 const TestimonialsSection = () => {
   return (
-    <section className="bg-dark-surface py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-left">
       <div className="container mx-auto px-6 lg:px-16">
         <ScrollReveal className="text-center">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-12">
