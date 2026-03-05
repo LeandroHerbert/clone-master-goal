@@ -14,7 +14,7 @@ const experiences = [
 
 const ExperiencesSection = () => {
   return (
-    <section className="bg-background py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-right">
       <div className="container mx-auto px-6 lg:px-16">
         <ScrollReveal className="text-center mb-14">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-4">

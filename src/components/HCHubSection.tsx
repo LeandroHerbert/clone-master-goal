@@ -19,7 +19,7 @@ const pillars = [
 
 const HCHubSection = () => {
   return (
-    <section className="bg-dark-surface py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-left">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
           <div className="flex-1">
@@ -35,15 +35,21 @@ const HCHubSection = () => {
               </p>
             </ScrollReveal>
 
-            <div className="space-y-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {pillars.map((pillar, i) => (
-                <ScrollReveal key={pillar.title} delay={i * 0.15}>
-                  <h3 className="text-gold text-xs font-heading font-bold tracking-widest-custom mb-2">
-                    {pillar.title}
-                  </h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {pillar.description}
-                  </p>
+                <ScrollReveal
+                  key={pillar.title}
+                  delay={i * 0.15}
+                  className={i === 2 ? "sm:col-span-2" : ""}
+                >
+                  <div className="pillar-box h-full">
+                    <h3 className="text-foreground text-base font-heading font-bold mb-3">
+                      {pillar.title}
+                    </h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
                 </ScrollReveal>
               ))}
             </div>

@@ -4,7 +4,7 @@ import heroBg from "@/assets/hero-bg.jpg";
 
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center bg-background overflow-hidden">
+    <section className="relative min-h-screen flex items-center bg-background overflow-hidden hero-glow">
       {/* Background image */}
       <div className="absolute inset-0">
         <motion.img

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const BookSection = () => {
   return (
-    <section className="bg-background py-20 lg:py-28">
+    <section className="relative bg-background py-20 lg:py-28 section-glow gold-glow-left">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <ScrollReveal direction="left" className="flex-1 flex justify-center">
