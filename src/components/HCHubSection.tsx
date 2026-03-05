@@ -1,4 +1,6 @@
 import logo3d from "@/assets/3d-logo.webp";
+import ScrollReveal from "./ScrollReveal";
+import { motion } from "framer-motion";
 
 const pillars = [
   {
@@ -20,40 +22,42 @@ const HCHubSection = () => {
     <section className="bg-dark-surface py-20 lg:py-28">
       <div className="container mx-auto px-6 lg:px-16">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-20 items-center">
-          {/* Left content */}
           <div className="flex-1">
-            <p className="text-gold-light text-xs font-heading font-medium tracking-widest-custom mb-4 uppercase">
-              Conheça o HC Hub
-            </p>
-            <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
-              O que é o HIGH CIRCLE HUB:
-            </h2>
-            <p className="text-muted-foreground text-sm uppercase tracking-widest-custom mb-10">
-              Um ecossistema formado por pessoas, empresas e experiências
-            </p>
+            <ScrollReveal>
+              <p className="text-gold-light text-xs font-heading font-medium tracking-widest-custom mb-4 uppercase">
+                Conheça o HC Hub
+              </p>
+              <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
+                O que é o HIGH CIRCLE HUB:
+              </h2>
+              <p className="text-muted-foreground text-sm uppercase tracking-widest-custom mb-10">
+                Um ecossistema formado por pessoas, empresas e experiências
+              </p>
+            </ScrollReveal>
 
             <div className="space-y-8">
-              {pillars.map((pillar) => (
-                <div key={pillar.title}>
+              {pillars.map((pillar, i) => (
+                <ScrollReveal key={pillar.title} delay={i * 0.15}>
                   <h3 className="text-gold text-xs font-heading font-bold tracking-widest-custom mb-2">
                     {pillar.title}
                   </h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">
                     {pillar.description}
                   </p>
-                </div>
+                </ScrollReveal>
               ))}
             </div>
           </div>
 
-          {/* Right - 3D Logo */}
-          <div className="flex-1 flex justify-center">
-            <img
+          <ScrollReveal direction="right" className="flex-1 flex justify-center">
+            <motion.img
               src={logo3d}
               alt="High Circle Hub Logo 3D"
               className="w-full max-w-md"
+              whileHover={{ rotateY: 15, scale: 1.03 }}
+              transition={{ type: "spring", stiffness: 200 }}
             />
-          </div>
+          </ScrollReveal>
         </div>
       </div>
     </section>
