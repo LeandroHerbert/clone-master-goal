@@ -25,7 +25,9 @@ const BookSection = () => {
               Faça o download da minha versão digital do livro PALAVRAS QUE LUCRAM clicando no botão abaixo:
             </p>
             <motion.a
-              href="#"
+              href="https://wa.me/5561992141518?text=Quero%20o%20livro%20digital%20Palavras%20que%20Lucram"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-block bg-primary text-primary-foreground font-heading font-bold uppercase tracking-wider px-8 py-3 rounded-lg hover:bg-gold-light transition-colors mb-4"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
