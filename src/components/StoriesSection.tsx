@@ -31,7 +31,7 @@ const StoriesSection = () => {
               size="lg"
               className="bg-primary text-primary-foreground font-heading font-bold uppercase tracking-wider hover:bg-gold-light"
             >
-              <a href="#">Quero participar!</a>
+              <a href="https://wa.me/5561992141518?text=Quero%20participar%20do%20Oficina%20High%20Ticket" target="_blank" rel="noopener noreferrer">Quero participar!</a>
             </Button>
           </div>
         </ScrollReveal>
