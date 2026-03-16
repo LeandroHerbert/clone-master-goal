@@ -80,7 +80,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.8, duration: 0.6 }}
           >
-            Estrategista, empresário, escritor, copywriter e conselheiro de empresas, Leandro Herbert desenvolveu a mentalidade de um enxadrista, se especializando em construir ecossistemas escaláveis que agregam valor e dão resultados todos os dias.
+            Estrategista, empresário, escritor, copywriter e conselheiro de empresas, Leandro Herbert desenvolveu a mentalidade de um enxadrista, se especializando em assessorar empresários a alcançar o próximo nível e na construção de ecossistemas escaláveis que agregam valor e dão resultados todos os dias.
           </motion.p>
         </div>
       </div>
