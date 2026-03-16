@@ -1,5 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
-import heroBg from "@/assets/hero-bg.jpg";
+import leandroImg from "@/assets/leandro-herbert.png";
 
 const AboutSection = () => {
   return (
