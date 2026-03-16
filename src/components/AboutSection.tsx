@@ -33,7 +33,7 @@ const AboutSection = () => {
           <ScrollReveal direction="right" className="flex-1 flex justify-center">
             <div className="relative w-full max-w-md">
               <img
-                src={heroBg}
+                src={leandroImg}
                 alt="Leandro Herbert"
                 className="w-full h-auto rounded-lg object-cover"
               />
