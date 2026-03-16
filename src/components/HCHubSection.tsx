@@ -25,7 +25,7 @@ const HCHubSection = () => {
           <div className="flex-1">
             <ScrollReveal>
               <p className="text-gold-light text-xs font-heading font-medium tracking-widest-custom mb-4 uppercase">
-                Conheça o HC Hub
+                Conheça o Ecossistema High Circle Hub
               </p>
               <h2 className="text-3xl md:text-4xl font-heading font-bold text-foreground mb-6">
                 O que é o HIGH CIRCLE HUB:
